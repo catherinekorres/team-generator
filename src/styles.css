@@ -1,8 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
 @import "semantic-ui-css/semantic.css";
 
+body {
+  background-color: #f9f9f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -4vh;
+}
+
 li {
   list-style: none;
   font-size: 1.25rem;
   margin-bottom: 0.5rem;
+}
+
+button {
+  opacity: 0.9;
+  transition: .3s !important;
+}
+
+button:hover {
+  opacity: 1;
 }
