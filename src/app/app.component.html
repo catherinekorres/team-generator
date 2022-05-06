@@ -16,6 +16,7 @@
         type="text"
         placeholder="Name"
         (input)="onInput(addMemberInput.value)"
+        [value]="newMemberName"
       />
       <button class="ui button" (click)="addMember()">Add</button>
     </div>
