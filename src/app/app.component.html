@@ -10,7 +10,7 @@
       <li *ngFor="let member of members">{{ member }}</li>
     </ul>
 
-    <div class="add-members-container ui input">
+    <div class="add-members-container ui input" [ngClass]="{error: errorMessage}">
       <input
         #addMemberInput
         type="text"
@@ -19,6 +19,9 @@
         [value]="newMemberName"
       />
       <button class="ui button" (click)="addMember()">Add</button>
+      <div class="error-msg">
+        <p *ngIf="errorMessage">{{ errorMessage }}</p>
+      </div>
     </div>
 
     <h4 class="ui horizontal divider header">

@@ -10,7 +10,6 @@
 
 h1 {
   font-size: 3rem;
-  margin-bottom: 0;
 }
 
 li {
@@ -65,5 +64,12 @@ li {
 }
 
 .error-msg {
-  color: red;
+  height: 24px;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: -18px;
+}
+
+.error-msg p {
+  color: #db2828;
 }
