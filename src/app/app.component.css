@@ -4,10 +4,6 @@
   margin: 0 auto;
 }
 
-.card {
-  box-shadow: 2px 3px 10px rgba(0,0,0,.15);
-}
-
 h1 {
   font-size: 3rem;
 }
@@ -73,14 +69,4 @@ li {
 
 .error-msg p {
   color: #db2828;
-}
-
-.team-container {
-  margin-bottom: 1rem;
-}
-
-.team-container ul {
-  border: 0.1rem solid rgba(128,128,128,0.418);
-  margin: 0;
-  padding: 0.5rem;
 }
