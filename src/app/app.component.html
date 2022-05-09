@@ -10,17 +10,17 @@
       <li *ngFor="let member of members">{{ member }}</li>
     </ul>
 
-    <div class="add-members-container ui input" [ngClass]="{error: errorMessage}">
+    <div class="add-members-container ui input" [ngClass]="{error: errorNoMemberName}">
       <input
         #addMemberInput
         type="text"
         placeholder="Name"
-        (input)="onInput(addMemberInput.value)"
+        (input)="onMemberInput(addMemberInput.value)"
         [value]="newMemberName"
       />
       <button class="ui button" (click)="addMember()">Add</button>
       <div class="error-msg">
-        <p *ngIf="errorMessage">{{ errorMessage }}</p>
+        <p *ngIf="errorNoMemberName">{{ errorNoMemberName }}</p>
       </div>
     </div>
 
@@ -29,9 +29,18 @@
       Generate teams
     </h4>
 
-    <div class="teams-generator-container ui action input">
-      <input type="text" placeholder="# of teams" />
-      <button class="ui button">Generate</button>
+    <div class="teams-generator-container ui action input" [ngClass]="{error: errorInvalidNumberOfTeams}">
+      <input
+        #numberOfTeamsInput
+        type="text"
+        placeholder="# of teams"
+        (input)="onNumberOfTeamsInput(numberOfTeamsInput.value)"
+        [value]="numberOfTeams"
+      />
+      <button class="ui button" (click)="generateTeams()">Generate</button>
+      <div class="error-msg">
+        <p *ngIf="errorInvalidNumberOfTeams">{{ errorInvalidNumberOfTeams }}</p>
+      </div>
     </div>
   </div>
 </div>
