@@ -1,13 +1,13 @@
 <div class="container">
   <div class="ui card">
-    <h1>{{ title }}</h1>
+    <h1>{{title}}</h1>
 
     <h4 class="ui horizontal divider header">
       <i class="user plus icon"></i>
       Add members
     </h4>
     <ul class="members-list">
-      <li *ngFor="let member of members">{{ member }}</li>
+      <li *ngFor="let member of members">{{member}}</li>
     </ul>
 
     <div class="add-members-container ui input" [ngClass]="{error: errorNoMemberName}">
@@ -20,7 +20,7 @@
       />
       <button class="ui button" (click)="addMember()">Add</button>
       <div class="error-msg">
-        <p *ngIf="errorNoMemberName">{{ errorNoMemberName }}</p>
+        <p *ngIf="errorNoMemberName">{{errorNoMemberName}}</p>
       </div>
     </div>
 
@@ -39,8 +39,17 @@
       />
       <button class="ui button" (click)="generateTeams()">Generate</button>
       <div class="error-msg">
-        <p *ngIf="errorInvalidNumberOfTeams">{{ errorInvalidNumberOfTeams }}</p>
+        <p *ngIf="errorInvalidNumberOfTeams">{{errorInvalidNumberOfTeams}}</p>
       </div>
+    </div>
+  </div>
+
+  <div *ngIf="teams.length" class="teams-container">
+    <div *ngFor="let team of teams; let i = index" class="team-container">
+      <h3>Team {{i+1}}</h3>
+      <ul>
+        <li *ngFor="let member of team">{{member}}</li>
+      </ul>
     </div>
   </div>
 </div>
