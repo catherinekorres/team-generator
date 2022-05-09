@@ -50,6 +50,7 @@ li {
 .teams-generator-container {
   margin: 0 0 .9rem;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .teams-generator-container button {
